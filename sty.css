@@ -1,0 +1,31 @@
+table {
+    width: 425px;   
+}
+
+th {
+    text-align: left;
+    background-color: #efefef;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: darkblue;
+}
+.ng-valid{
+    background-color:rgb(44, 226, 226);
+    border-radius: 20px;
+}
+.th-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+
+}
+
+/*.box{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:    "v1 v2 v3 v4";
+    justify-content: space-around;
+
+}
+
