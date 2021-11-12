@@ -1,5 +1,5 @@
 table {
-    width: 425px;   
+    width: 800px;
 }
 
 th {
@@ -9,18 +9,29 @@ th {
     border-radius: 5px;
     box-shadow: darkblue;
 }
-.ng-valid{
-    background-color:rgb(44, 226, 226);
+
+.ng-valid {
+    background-color: rgb(44, 226, 226);
     border-radius: 20px;
 }
-.th-container{
+
+.th-container {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    gap: 5px;
+    padding: 5px;
 
 
 }
 
+.newdiv {
+    display: grid;
+}
+
+.newdivContent {
+
+}
 /*.box{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;

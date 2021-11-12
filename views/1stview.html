@@ -1,22 +1,52 @@
-<h2> <em> Sunrise developers</em></h2>
-Filter: <input type="text" placeholder="Enter a name!" ng-model="inputt" />
-<br /><br />
-<table border="1">
+<div class="container-fluid">
 
-       <tr>
-         <th ng-click="doSort('name')" ng-model="reverse">
-            <span>Name test</span> <i ng-class="reverse ?  a: b "></i></th> 
-         <th ng-click="doSort('Country')">
-            <span>Country</span> <i  ng-class="reverse ? a : b "></i></th>
-         <th ng-click="doSort('ExpensesYear')">
-            <span>Expenses/year</span> <i  ng-class="reverse ? a: b "></i></th>
-         <th ng-click="doSort('dateOfBirth')"><span>Date Of Birth</span> <i  ng-class="reverse ? a: b "></i></th>
-       </tr>
+    <h2 xmlns="http://www.w3.org/1999/html"><em> Sunrise developers</em></h2>
+    Filter: <input type="text" placeholder="Enter a name!" ng-model="inputt"/>
+    <br/><br/>
+    <table class="table table-success table-striped">
+        <tr>
+            <th ng-click="doSort('name')">
+                <div class="th-container">
+                    <span>Name test</span> <i ng-class="reverse ?  a: b "></i>
+                </div>
+            </th>
+            <th ng-click="doSort('Country')">
+                <div class="th-container">
+                    <span>Country</span> <i ng-class="reverse ? a : b "></i>
+                </div>
+            </th>
+            <th ng-click="doSort('ExpensesYear')">
+                <div class="th-container">
+                    <span>Expenses/year</span> <i ng-class="reverse ? a: b "></i>
+                </div>
+            </th>
+            <th ng-click="doSort('dateOfBirth')">
+                <div class="th-container">
+                    <span>Date Of Birth</span> <i ng-class="reverse ? a: b "></i>
+                </div>
+            </th>
+        </tr>
+        <tr ng-repeat="person in persons | filter:inputt | orderBy:sortBy:reverse">
+            <td>{{ person.name }}</td>
+            <td>{{ person.Country}}</td>
+            <td>{{ person.ExpensesYear | currency }}</td>
+            <td>{{ person.dateOfBirth | date }}</td>
+        </tr>
+    </table>
 
-       <tr ng-repeat="person in persons | filter:inputt | orderBy:sortBy:reverse">
-         <td>{{ person.name }}</td>
-         <td>{{ person.Country}}</td>
-         <td>{{ person.ExpensesYear | currency }}</td>
-         <td>{{ person.dateOfBirth | date }}</td>
-       </tr>
-</table>
+
+    <div class="row">
+        <div class="col-3 bg-danger">
+            div 1
+        </div>
+        <div class="col-3 bg-warning">
+            div 2
+        </div>
+        <div class="col-3 bg-primary">
+            div 3
+        </div>
+        <div class="col-3 bg-secondary">
+            div 4
+        </div>
+    </div>
+</div>
