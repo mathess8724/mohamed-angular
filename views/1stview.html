@@ -2,17 +2,17 @@
 Filter: <input type="text" placeholder="Enter a name!" ng-model="inputt" />
 <br /><br />
 <table border="1">
- 
+
        <tr>
          <th ng-click="doSort('name')" ng-model="reverse">
-            <span>Name</span> <i ng-class="reverse ?  a: b "></i></th> 
+            <span>Name from mat</span> <i ng-class="reverse ?  a: b "></i></th>
          <th ng-click="doSort('Country')">
             <span>Country</span> <i  ng-class="reverse ? a : b "></i></th>
          <th ng-click="doSort('ExpensesYear')">
             <span>Expenses/year</span> <i  ng-class="reverse ? a: b "></i></th>
          <th ng-click="doSort('dateOfBirth')"><span>Date Of Birth</span> <i  ng-class="reverse ? a: b "></i></th>
        </tr>
- 
+
        <tr ng-repeat="person in persons | filter:inputt | orderBy:sortBy:reverse">
          <td>{{ person.name }}</td>
          <td>{{ person.Country}}</td>
